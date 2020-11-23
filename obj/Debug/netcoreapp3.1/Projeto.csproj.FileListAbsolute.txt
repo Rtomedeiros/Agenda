@@ -1,0 +1,13 @@
+D:\Documents\GitHub\Projeto Agenda\bin\Debug\netcoreapp3.1\Projeto.exe
+D:\Documents\GitHub\Projeto Agenda\bin\Debug\netcoreapp3.1\Projeto.deps.json
+D:\Documents\GitHub\Projeto Agenda\bin\Debug\netcoreapp3.1\Projeto.runtimeconfig.json
+D:\Documents\GitHub\Projeto Agenda\bin\Debug\netcoreapp3.1\Projeto.runtimeconfig.dev.json
+D:\Documents\GitHub\Projeto Agenda\bin\Debug\netcoreapp3.1\Projeto.dll
+D:\Documents\GitHub\Projeto Agenda\bin\Debug\netcoreapp3.1\Projeto.pdb
+D:\Documents\GitHub\Projeto Agenda\obj\Debug\netcoreapp3.1\Projeto.csprojAssemblyReference.cache
+D:\Documents\GitHub\Projeto Agenda\obj\Debug\netcoreapp3.1\Projeto.AssemblyInfoInputs.cache
+D:\Documents\GitHub\Projeto Agenda\obj\Debug\netcoreapp3.1\Projeto.AssemblyInfo.cs
+D:\Documents\GitHub\Projeto Agenda\obj\Debug\netcoreapp3.1\Projeto.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\Projeto Agenda\obj\Debug\netcoreapp3.1\Projeto.dll
+D:\Documents\GitHub\Projeto Agenda\obj\Debug\netcoreapp3.1\Projeto.pdb
+D:\Documents\GitHub\Projeto Agenda\obj\Debug\netcoreapp3.1\Projeto.genruntimeconfig.cache
