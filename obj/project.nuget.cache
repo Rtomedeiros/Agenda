@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "3xAKS58g6RutHS60NS72TWoSo5hBcf+Y5Rcl7+oSOuK63j+5oQoiO3c0Ex1b6AJizoAWxG206LcROLNLFEXTRA==",
+  "dgSpecHash": "kDC0oML0tVDE1DTdV09ZfloAyJ/a7rWhBUU0z1ggfklxGlp5ThkZV8a2dSt+OlHaH+pJsXoHNHZH+G5YPoD29Q==",
   "success": true,
-  "projectFilePath": "D:\\Documents\\GitHub\\Projeto Agenda\\Projeto.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Documents\\GitHub\\Agenda\\Projeto.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\revol\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.113.2\\stub.system.data.sqlite.core.netstandard.1.0.113.2.nupkg.sha512",
+    "C:\\Users\\revol\\.nuget\\packages\\system.data.sqlite.core\\1.0.113.7\\system.data.sqlite.core.1.0.113.7.nupkg.sha512",
+    "C:\\Users\\revol\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\revol\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
+  ],
   "logs": []
 }

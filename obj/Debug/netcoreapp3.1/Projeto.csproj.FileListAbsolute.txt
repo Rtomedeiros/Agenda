@@ -11,3 +11,22 @@ D:\Documents\GitHub\Projeto Agenda\obj\Debug\netcoreapp3.1\Projeto.csproj.CoreCo
 D:\Documents\GitHub\Projeto Agenda\obj\Debug\netcoreapp3.1\Projeto.dll
 D:\Documents\GitHub\Projeto Agenda\obj\Debug\netcoreapp3.1\Projeto.pdb
 D:\Documents\GitHub\Projeto Agenda\obj\Debug\netcoreapp3.1\Projeto.genruntimeconfig.cache
+D:\Documents\GitHub\Agenda\bin\Debug\netcoreapp3.1\Projeto.exe
+D:\Documents\GitHub\Agenda\bin\Debug\netcoreapp3.1\Projeto.deps.json
+D:\Documents\GitHub\Agenda\bin\Debug\netcoreapp3.1\Projeto.runtimeconfig.json
+D:\Documents\GitHub\Agenda\bin\Debug\netcoreapp3.1\Projeto.runtimeconfig.dev.json
+D:\Documents\GitHub\Agenda\bin\Debug\netcoreapp3.1\Projeto.dll
+D:\Documents\GitHub\Agenda\bin\Debug\netcoreapp3.1\Projeto.pdb
+D:\Documents\GitHub\Agenda\bin\Debug\netcoreapp3.1\System.Data.SQLite.dll
+D:\Documents\GitHub\Agenda\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\SQLite.Interop.dll
+D:\Documents\GitHub\Agenda\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\SQLite.Interop.dll
+D:\Documents\GitHub\Agenda\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SQLite.Interop.dll
+D:\Documents\GitHub\Agenda\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SQLite.Interop.dll
+D:\Documents\GitHub\Agenda\obj\Debug\netcoreapp3.1\Projeto.csprojAssemblyReference.cache
+D:\Documents\GitHub\Agenda\obj\Debug\netcoreapp3.1\Projeto.AssemblyInfoInputs.cache
+D:\Documents\GitHub\Agenda\obj\Debug\netcoreapp3.1\Projeto.AssemblyInfo.cs
+D:\Documents\GitHub\Agenda\obj\Debug\netcoreapp3.1\Projeto.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\Agenda\obj\Debug\netcoreapp3.1\Projeto.csproj.CopyComplete
+D:\Documents\GitHub\Agenda\obj\Debug\netcoreapp3.1\Projeto.dll
+D:\Documents\GitHub\Agenda\obj\Debug\netcoreapp3.1\Projeto.pdb
+D:\Documents\GitHub\Agenda\obj\Debug\netcoreapp3.1\Projeto.genruntimeconfig.cache
