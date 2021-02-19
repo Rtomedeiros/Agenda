@@ -1,30 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite; // dotnet add package Microsoft.Data.Sqlite
+using System.Globalization;
 
 static class Agenda
 {
     static List<Evento> eventos = new List<Evento>();
-
-    public static void LoadDatabase()
-    {
-        string cs = "Data Source=agenda.db";
-        using SQLiteConnection dbConnection = new SQLiteConnection(cs);
-        dbConnection.Open();
-        SQLiteCommand cmd = dbConnection.CreateCommand();
-        cmd.CommandText = @"CREATE TABLE IF NOT EXISTS Eventos(Evento VARCHAR(255), Data datetime)";
-        cmd.ExecuteNonQuery();
-
-        cmd.CommandText = @"SELECT * FROM Eventos";
-        using (SQLiteDataReader reader = cmd.ExecuteReader())
-        {
-            while (reader.Read())
-            {
-                string evento = reader.GetString(0);
-                Console.WriteLine($"test {evento}!");
-            }
-        }
-    }
 
     public static void AdicionarEvento(Evento e)
     {
@@ -36,32 +17,35 @@ static class Agenda
         eventos.ForEach(x => Console.WriteLine($"[{eventos.IndexOf(x)}] {x.ToString()}\n"));
     }
 
-    public static void ExcluirEvento(int id)
+    public static void DeletarEvento(int id)
     {
         Evento deletar = eventos[id];
-        if (deletar == null) return;
+        if (deletar == null)
+        {
+            Console.WriteLine("Este evento não existe.");
+            return;
+        }
         eventos.RemoveAt(id);
     }
 
     public static void CriarEvento()
     {
-        Console.WriteLine("Digite o dia do evento: ");
-        int dia = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Digite o mês do evento: ");
-        int mes = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Digite o ano do evento: ");
-        int ano = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Digite a descrição do evento: ");
-        string descricao = Console.ReadLine();
-        try
+        Console.WriteLine("Digite a data do evento: (Ex: 15/02/2021)");
+        while (true)
         {
-            DateTime dt = new DateTime(ano, mes, dia);
-            Evento novo = new Evento(dt, descricao);
-            Agenda.AdicionarEvento(novo);
-        }
-        catch
-        {
-            Console.WriteLine("Você digitou algum valor incorreto, tente novamente.");
+            string data = Console.ReadLine();
+            if (DateTime.TryParse(data, new CultureInfo("pt-BR"), DateTimeStyles.None, out DateTime dataValida))
+            {
+                Console.WriteLine("Digite uma descrição para o evento: ");
+                string descricao = Console.ReadLine();
+                Evento evento = new Evento(dataValida, descricao);
+                Agenda.AdicionarEvento(evento);
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Data inválida. Digite novamente: ");
+            }
         }
     }
 
@@ -69,7 +53,6 @@ static class Agenda
     {
         Console.WriteLine("Digite o evento que deseja excluir: ");
         int idExcluir = Convert.ToInt32(Console.ReadLine());
-        Evento excluir = Agenda.eventos[idExcluir];
-        Agenda.eventos.Remove(excluir);
+        Agenda.DeletarEvento(idExcluir);
     }
 }

@@ -2,8 +2,9 @@ using System;
 
 class Evento
 {
-    DateTime Data = new DateTime();
-    string Descricao;
+    int id { get; set; }
+    DateTime Data { get; set; }
+    string Descricao { get; set; }
 
     public Evento(DateTime entradaData, string descricaoEntrada)
     {

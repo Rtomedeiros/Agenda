@@ -7,7 +7,7 @@ namespace ProjetoAgenda
     {
         static void Main(string[] args)
         {
-            Agenda.LoadDatabase();
+            Database.LoadDatabase();
 
             short MenuChoice = 0;
             while (true)
