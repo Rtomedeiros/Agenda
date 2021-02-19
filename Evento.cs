@@ -9,10 +9,10 @@ class Evento
     {
         this.Data = entradaData;
         this.Descricao = descricaoEntrada;
-    }   
+    }
 
-    public void PrintEvento()
-    {   
-        Console.Write($"Data: {this.Data.ToShortDateString()}. Evento: {this.Descricao}");
+    public override string ToString()
+    {
+        return $"Data: {this.Data.ToShortDateString()}. Evento: {this.Descricao}";
     }
 }
