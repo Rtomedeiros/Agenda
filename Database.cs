@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
 using System.Data.SQLite; // dotnet add package Microsoft.Data.Sqlite
-using System.Globalization;
 
 static class Database
 {
@@ -26,34 +24,42 @@ static class Database
                 {
                     while (reader.Read())
                     {
-                        string evento = reader.GetString(0);
-                        Console.WriteLine($"test {evento}!");
+                        Evento e = new Evento(reader.GetInt32(0), Convert.ToDateTime(reader.GetString(2)), reader.GetString(1));
+                        Agenda.AdicionarEvento(e);
                     }
                 }
             }
         }
+        Agenda.SortByDate();
     }
 
-    public static void DatabaseDelete()
+    public static void DatabaseDelete(Evento e)
     {
         using (SQLiteConnection dbConnection = Database.GetConnection())
         {
             dbConnection.Open();
             using (SQLiteCommand cmd = dbConnection.CreateCommand())
             {
-
+                cmd.CommandText = @"DELETE FROM Eventos WHERE id = $id;";
+                cmd.Parameters.AddWithValue("$id", e.id);
+                cmd.ExecuteNonQuery();
             }
         }
     }
 
-    public static void DatabaseCreate()
+    public static Evento DatabaseCreate(string descricao, DateTime data)
     {
         using (SQLiteConnection dbConnection = Database.GetConnection())
         {
             dbConnection.Open();
             using (SQLiteCommand cmd = dbConnection.CreateCommand())
             {
-
+                cmd.CommandText = @"INSERT INTO Eventos(Evento, Data) VALUES ($Evento, $Data)";
+                cmd.Parameters.AddWithValue("$Evento", descricao);
+                cmd.Parameters.AddWithValue("$Data", data.ToLongDateString());
+                cmd.ExecuteNonQuery();
+                Evento evento = new Evento((int)dbConnection.LastInsertRowId, data, descricao);
+                return evento;
             }
         }
     }

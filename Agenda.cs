@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Data.SQLite; // dotnet add package Microsoft.Data.Sqlite
 using System.Globalization;
 
 static class Agenda
@@ -14,18 +13,25 @@ static class Agenda
 
     public static void ListarEventos()
     {
-        eventos.ForEach(x => Console.WriteLine($"[{eventos.IndexOf(x)}] {x.ToString()}\n"));
+        eventos.ForEach(x => Console.Write($"[{eventos.IndexOf(x)}] {x.ToString()}\n"));
     }
 
-    public static void DeletarEvento(int id)
+    public static void SortByDate()
     {
-        Evento deletar = eventos[id];
+        eventos.Sort((x, y) => y.Data.CompareTo(x.Data));
+        eventos.Reverse();
+    }
+
+    public static void DeletarEvento(int index)
+    {
+        Evento deletar = eventos[index];
         if (deletar == null)
         {
             Console.WriteLine("Este evento não existe.");
             return;
         }
-        eventos.RemoveAt(id);
+        eventos.Remove(deletar);
+        Database.DatabaseDelete(deletar);
     }
 
     public static void CriarEvento()
@@ -38,8 +44,8 @@ static class Agenda
             {
                 Console.WriteLine("Digite uma descrição para o evento: ");
                 string descricao = Console.ReadLine();
-                Evento evento = new Evento(dataValida, descricao);
-                Agenda.AdicionarEvento(evento);
+                Evento novo = Database.DatabaseCreate(descricao, dataValida);
+                Agenda.AdicionarEvento(novo);
                 break;
             }
             else
@@ -52,7 +58,7 @@ static class Agenda
     public static void ExcluirEvento()
     {
         Console.WriteLine("Digite o evento que deseja excluir: ");
-        int idExcluir = Convert.ToInt32(Console.ReadLine());
-        Agenda.DeletarEvento(idExcluir);
+        int indexExcluir = Convert.ToInt32(Console.ReadLine());
+        Agenda.DeletarEvento(indexExcluir);
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace ProjetoAgenda
 {
     class Program
@@ -9,7 +8,6 @@ namespace ProjetoAgenda
         {
             Database.LoadDatabase();
 
-            short MenuChoice = 0;
             while (true)
             {
                 Console.WriteLine("---- Projeto Agenda ----");
@@ -18,7 +16,10 @@ namespace ProjetoAgenda
                 Console.WriteLine("2 - Criar evento.");
                 Console.WriteLine("3 - Excluir evento.");
                 Console.WriteLine("4 - Sair.");
-                MenuChoice = Convert.ToInt16(Console.ReadLine());
+                if (!Int16.TryParse(Console.ReadLine(), out short MenuChoice))
+                {
+                    Console.WriteLine("Digite uma opção válida.");
+                }
                 if (MenuChoice == 1)
                 {
                     Agenda.ListarEventos();

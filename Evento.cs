@@ -1,19 +1,22 @@
 using System;
+using System.Globalization;
 
 class Evento
 {
-    int id { get; set; }
-    DateTime Data { get; set; }
-    string Descricao { get; set; }
+    public int id { get; set; }
+    public DateTime Data { get; set; }
+    public string Descricao { get; set; }
 
-    public Evento(DateTime entradaData, string descricaoEntrada)
+    public Evento(int id, DateTime entradaData, string descricaoEntrada)
     {
+        this.id = id;
         this.Data = entradaData;
         this.Descricao = descricaoEntrada;
     }
 
     public override string ToString()
     {
-        return $"Data: {this.Data.ToShortDateString()}. Evento: {this.Descricao}";
+        CultureInfo pt = new CultureInfo("pt-BR");
+        return $"Data: {this.Data.ToString(pt.DateTimeFormat.ShortDatePattern, pt)}. Evento: {this.Descricao}";
     }
 }
