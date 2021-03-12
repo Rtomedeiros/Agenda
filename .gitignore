@@ -1,3 +1,5 @@
+obj
+bin
 bin/Debug/netcoreapp3.1/Projeto.dll
 bin/Debug/netcoreapp3.1/Projeto.pdb
 obj/Debug/netcoreapp3.1/Projeto.assets.cache
@@ -10,8 +12,6 @@ obj/Projeto.csproj.nuget.g.props
 obj/Debug/netcoreapp3.1/Projeto.assets.cache
 obj/Debug/netcoreapp3.1/Projeto.csproj.CoreCompileInputs.cache
 obj/Debug/netcoreapp3.1/Projeto.csprojAssemblyReference.cache
-obj/
-bin/
 bin/Debug/netcoreapp3.1/Projeto.dll
 bin/Debug/netcoreapp3.1/Projeto.exe
 bin/Debug/netcoreapp3.1/Projeto.pdb
