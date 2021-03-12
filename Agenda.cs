@@ -78,4 +78,41 @@ static class Agenda
         Console.ReadKey();
         Console.Clear();
     }
+
+    //Método Mudar Tema (Esquema de cores do console)
+    public static void MudarTema()
+    {
+        Console.WriteLine("1- Tema Padrão - Fundo Preto e letras brancas.");
+        Console.WriteLine("2- Tema Claro  - Fundo Branco e letras azuis.");
+        Console.WriteLine("Digite o número abaixo para escolher o tema: ");
+        if (!Int16.TryParse(Console.ReadLine(), out short TemaChoice)) //Condição para verificar se o número digitado está dentro das opções.
+        {
+            Console.WriteLine("Digite uma opção válida."); //Caso o nº digitado não esteja dentro das opções, mostrar esta mensagem.
+            Console.Clear();
+        }
+        if (TemaChoice == 1)
+        {
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.Clear();
+        }
+        else if (TemaChoice == 2)
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.Clear();
+        }
+        else
+        {
+            Console.WriteLine("Digite uma opção válida.");
+            Console.WriteLine("Pressione QQUER TECLA para voltar ao menu.");
+            Console.ReadKey();
+            Console.Clear();
+        }
+        //Console.ForegroundColor = ConsoleColor.Black;
+        //Console.BackgroundColor = ConsoleColor.White;
+        //Console.Clear();
+    }
+
+
 }

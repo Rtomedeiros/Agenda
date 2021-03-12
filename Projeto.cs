@@ -11,10 +11,6 @@ namespace ProjetoAgenda
 
             while (true)
             {
-                //Console.ForegroundColor = ConsoleColor.Blue;
-                //Console.BackgroundColor = ConsoleColor.White;
-                //Console.Clear();
-
                 //Menu Principal da Agenda
                 Console.WriteLine("|----------------------------------------------------------------------------------------|");
                 Console.WriteLine("|------------------------------------ AGENDA PESSOAL ------------------------------------|");
@@ -24,7 +20,8 @@ namespace ProjetoAgenda
                 Console.WriteLine("| 1 - LISTAR EVENTO                                                                      |");
                 Console.WriteLine("| 2 - CRIAR EVENTO                                                                       |");
                 Console.WriteLine("| 3 - EXCLUIR EVENTO                                                                     |");
-                Console.WriteLine("| 4 - SAIR                                                                               |");
+                Console.WriteLine("| 4 - MUDAR TEMA                                                                         |");
+                Console.WriteLine("| 5 - SAIR                                                                               |");
                 Console.WriteLine("|----------------------------------------------------------------------------------------|");
                 if (!Int16.TryParse(Console.ReadLine(), out short MenuChoice)) //Condição para verificar se o número digitado está dentro das opções.
                 {
@@ -44,6 +41,10 @@ namespace ProjetoAgenda
                     Agenda.ExcluirEvento(); //Método para excluir as anotações da agenda.
                 }
                 else if (MenuChoice == 4)
+                {
+                    Agenda.MudarTema(); //Método para mudar o esquema de cores da agenda.
+                }
+                else if (MenuChoice == 5)
                 {
                     break; //Opção para fechar o programa.
                 }
