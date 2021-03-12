@@ -6,55 +6,37 @@ namespace ProjetoAgenda
     {
         static void Main(string[] args)
         {
-            //Carregar o Banco de Dados ao iniciar o programa
             Database.LoadDatabase();
 
             while (true)
             {
-                //Menu Principal da Agenda
-                Console.WriteLine("|----------------------------------------------------------------------------------------|");
-                Console.WriteLine("|------------------------------------ AGENDA PESSOAL ------------------------------------|");
-                Console.WriteLine("|----------------------------------------------------------------------------------------|");
-                Console.WriteLine("| Digite os números abaixo para navegar o menu:                                          |");
-                Console.WriteLine("|----------------------------------------------------------------------------------------|");
-                Console.WriteLine("| 1 - LISTAR EVENTO                                                                      |");
-                Console.WriteLine("| 2 - CRIAR EVENTO                                                                       |");
-                Console.WriteLine("| 3 - EXCLUIR EVENTO                                                                     |");
-                Console.WriteLine("| 4 - MUDAR TEMA                                                                         |");
-                Console.WriteLine("| 5 - SAIR                                                                               |");
-                Console.WriteLine("|----------------------------------------------------------------------------------------|");
-                if (!Int16.TryParse(Console.ReadLine(), out short MenuChoice)) //Condição para verificar se o número digitado está dentro das opções.
+                Console.WriteLine("---- Projeto Agenda ----");
+                Console.WriteLine("Digite os números a esquerda para navegar o menu:");
+                Console.WriteLine("1 - Listar datas.");
+                Console.WriteLine("2 - Criar evento.");
+                Console.WriteLine("3 - Excluir evento.");
+                Console.WriteLine("4 - Sair.");
+                if (!Int16.TryParse(Console.ReadLine(), out short MenuChoice))
                 {
-                    Console.WriteLine("Digite uma opção válida."); //Caso o nº digitado não esteja dentro das opções, mostrar esta mensagem.
-                    Console.Clear();
+                    Console.WriteLine("Digite uma opção válida.");
                 }
                 if (MenuChoice == 1)
                 {
-                    Agenda.ListarEventos(); //Método para listar as anotações da agenda.
+                    Agenda.ListarEventos();
                 }
                 else if (MenuChoice == 2)
                 {
-                    Agenda.CriarEvento(); //Método para criar as anotações da agenda.
+                    Agenda.CriarEvento();
                 }
                 else if (MenuChoice == 3)
                 {
-                    Agenda.ExcluirEvento(); //Método para excluir as anotações da agenda.
+                    Agenda.ExcluirEvento();
                 }
                 else if (MenuChoice == 4)
                 {
-                    Agenda.MudarTema(); //Método para mudar o esquema de cores da agenda.
+                    break;
                 }
-                else if (MenuChoice == 5)
-                {
-                    break; //Opção para fechar o programa.
-                }
-                else
-                {
-                    Console.WriteLine("Digite uma opção válida.");
-                    Console.WriteLine("Pressione QQUER TECLA para voltar ao menu.");
-                    Console.ReadKey();
-                    Console.Clear();
-                }
+                else Console.WriteLine("Digite uma opção válida.");
             }
         }
     }

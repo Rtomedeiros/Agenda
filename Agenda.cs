@@ -16,7 +16,7 @@ static class Agenda
     //Método Listar evento
     public static void ListarEventos()
     {
-        eventos.ForEach(x => Console.Write($"[{eventos.IndexOf(x)}] {x.ToString()}\n"));
+        eventos.ForEach(x => Console.Write($"[{eventos.IndexOf(x) + 1}] {x.ToString()}\n"));
         Console.WriteLine("\nPressione QQUER TECLA para voltar ao menu.");
         Console.ReadKey();
         Console.Clear();
@@ -31,10 +31,15 @@ static class Agenda
     //Método Deletar evento
     public static void DeletarEvento(int index)
     {
-        Evento deletar = eventos[index];
+        if (index < 1 || index > eventos.Count)
+        { // [0] [1]
+            Console.WriteLine("Este evento não existe.1");
+            return;
+        }
+        Evento deletar = eventos[index - 1];
         if (deletar == null)
         {
-            Console.WriteLine("Este evento não existe.");
+            Console.WriteLine("Este evento não existe.2");
             return;
         }
         eventos.Remove(deletar);
