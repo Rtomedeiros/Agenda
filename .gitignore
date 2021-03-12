@@ -3,3 +3,10 @@ bin/Debug/netcoreapp3.1/Projeto.pdb
 obj/Debug/netcoreapp3.1/Projeto.assets.cache
 obj/Debug/netcoreapp3.1/Projeto.dll
 obj/Debug/netcoreapp3.1/Projeto.pdb
+obj/project.assets.json
+obj/project.nuget.cache
+obj/Projeto.csproj.nuget.dgspec.json
+obj/Projeto.csproj.nuget.g.props
+obj/Debug/netcoreapp3.1/Projeto.assets.cache
+obj/Debug/netcoreapp3.1/Projeto.csproj.CoreCompileInputs.cache
+obj/Debug/netcoreapp3.1/Projeto.csprojAssemblyReference.cache
