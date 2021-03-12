@@ -3,10 +3,12 @@ using System.Globalization;
 
 class Evento
 {
-    public int id { get; set; }
-    public DateTime Data { get; set; }
-    public string Descricao { get; set; }
+    //Atributos da classe Evento
+    public int id { get; set; } //Declarando os métodos get e set - ID.
+    public DateTime Data { get; set; } //Declarando os métodos get e set - DATA.
+    public string Descricao { get; set; } //Declarando os métodos get e set - DESCRICAO.
 
+    //Set dos atributos da classe evento (Set - GRAVAR)
     public Evento(int id, DateTime entradaData, string descricaoEntrada)
     {
         this.id = id;
@@ -14,6 +16,7 @@ class Evento
         this.Descricao = descricaoEntrada;
     }
 
+    //Get dos atributos da classe evento (Get - PEGAR)
     public override string ToString()
     {
         CultureInfo pt = new CultureInfo("pt-BR");
