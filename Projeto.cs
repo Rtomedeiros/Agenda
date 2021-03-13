@@ -19,8 +19,11 @@ namespace ProjetoAgenda
                 if (!Int16.TryParse(Console.ReadLine(), out short MenuChoice))
                 {
                     Console.WriteLine("Digite uma opção válida.");
+                    Console.WriteLine("Pressione QQUER TECLA para voltar ao menu.");
+                    Console.ReadKey();
+                    Console.Clear();
                 }
-                if (MenuChoice == 1)
+                else if (MenuChoice == 1)
                 {
                     Agenda.ListarEventos();
                 }
@@ -36,7 +39,13 @@ namespace ProjetoAgenda
                 {
                     break;
                 }
-                else Console.WriteLine("Digite uma opção válida.");
+                else
+                {
+                    Console.WriteLine("Digite uma opção válida.");
+                    Console.WriteLine("Pressione QQUER TECLA para voltar ao menu.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
             }
         }
     }

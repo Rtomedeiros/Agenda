@@ -78,7 +78,7 @@ static class Agenda
         Console.WriteLine("Digite o evento que deseja excluir: ");
         int indexExcluir = Convert.ToInt32(Console.ReadLine());
         Agenda.DeletarEvento(indexExcluir);
-        Console.WriteLine("\nEvento excluido com sucesso!");
+        //Console.WriteLine("\nEvento excluido com sucesso!");
         Console.WriteLine("Pressione QQUER TECLA para voltar ao menu.");
         Console.ReadKey();
         Console.Clear();
