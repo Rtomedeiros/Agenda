@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\revol\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\revol\\.nuget\\packages"
-    ]
-  }
-}
