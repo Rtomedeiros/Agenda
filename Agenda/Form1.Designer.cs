@@ -37,7 +37,7 @@ namespace Agenda
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(18, 260);
+            this.addButton.Location = new System.Drawing.Point(18, 592);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
             this.addButton.TabIndex = 1;
@@ -47,7 +47,7 @@ namespace Agenda
             // 
             // removeButton
             // 
-            this.removeButton.Location = new System.Drawing.Point(170, 260);
+            this.removeButton.Location = new System.Drawing.Point(656, 592);
             this.removeButton.Name = "removeButton";
             this.removeButton.Size = new System.Drawing.Size(75, 23);
             this.removeButton.TabIndex = 2;
@@ -61,13 +61,13 @@ namespace Agenda
             this.listBox.ItemHeight = 15;
             this.listBox.Location = new System.Drawing.Point(18, 177);
             this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(227, 79);
+            this.listBox.Size = new System.Drawing.Size(713, 409);
             this.listBox.TabIndex = 3;
             this.listBox.SelectedIndexChanged += new System.EventHandler(this.listBox_SelectedIndexChanged);
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(18, 13);
+            this.monthCalendar1.Location = new System.Drawing.Point(260, 8);
             this.monthCalendar1.MaxSelectionCount = 1;
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 4;
@@ -77,7 +77,7 @@ namespace Agenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(266, 290);
+            this.ClientSize = new System.Drawing.Size(750, 625);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.listBox);
             this.Controls.Add(this.removeButton);

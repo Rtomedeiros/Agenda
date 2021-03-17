@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "ScmrfgecdOQIBlWlVQrRToTI4a3I51ztATBvQjZXQUb77nAMHGec4/0Gpr3xcEz6k7KXtCweqD74gsUnfqbx/A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\rtome\\Desktop\\Workspace\\Projeto Agenda\\Agenda\\Agenda\\Agenda.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rtome\\.nuget\\packages\\microsoft.data.sqlite\\5.0.4\\microsoft.data.sqlite.5.0.4.nupkg.sha512",
+    "C:\\Users\\rtome\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.4\\microsoft.data.sqlite.core.5.0.4.nupkg.sha512",
+    "C:\\Users\\rtome\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.4\\sqlitepclraw.bundle_e_sqlite3.2.0.4.nupkg.sha512",
+    "C:\\Users\\rtome\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
+    "C:\\Users\\rtome\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.4\\sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",
+    "C:\\Users\\rtome\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.4\\sqlitepclraw.provider.dynamic_cdecl.2.0.4.nupkg.sha512",
+    "C:\\Users\\rtome\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
+  "logs": []
+}
